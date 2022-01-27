@@ -15,7 +15,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-     
+        return Employee::all();
     }
 
     /**
@@ -26,7 +26,12 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $employee = new Employee;
+        $employee->title = $request->title;
+        $employee->firstname = $request->firstname;
+        $employee->lastname = $request->lastname;
+        $employee->jobtitle = $request->jobtitle;
+        $employee->save();
     }
 
     /**
@@ -37,7 +42,7 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        //
+        return Employee::find($id);
     }
 
     /**
@@ -49,7 +54,13 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $employee = Employee::find($id);
+        $employee->title = $request->title;
+        $employee->firstname = $request->firstname;
+        $employee->lastname = $request->lastname;
+        $employee->jobtitle = $request->jobtitle;
+        $employee->save();
+        
     }
 
     /**
@@ -60,6 +71,7 @@ class EmployeeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $employee = Employee::find($id);
+        $employee->delete();
     }
 }
