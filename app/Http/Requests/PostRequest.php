@@ -26,7 +26,7 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['required','min:10'],
+            'title' => 'required',
             'firstname' => 'required',
             'lastname' => 'required',
             'jobtitle' => 'required'
