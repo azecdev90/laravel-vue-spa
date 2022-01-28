@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Employee;
+use App\Http\Requests\PostRequest;
+use App\Http\Resources\EmployeeCollection;
+use App\Http\Resources\EmployeeResource;
 
 class EmployeeController extends Controller
 {
@@ -15,7 +18,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return Employee::all();
+        return new EmployeeCollection(Employee::all());
+
     }
 
     /**
@@ -24,14 +28,17 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
+     
         $employee = new Employee;
         $employee->title = $request->title;
         $employee->firstname = $request->firstname;
         $employee->lastname = $request->lastname;
         $employee->jobtitle = $request->jobtitle;
         $employee->save();
+
+
     }
 
     /**
@@ -42,7 +49,8 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        return Employee::find($id);
+     
+        return new EmployeeResource(Employee::find($id));
     }
 
     /**
@@ -52,7 +60,7 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
         $employee = Employee::find($id);
         $employee->title = $request->title;
@@ -60,6 +68,8 @@ class EmployeeController extends Controller
         $employee->lastname = $request->lastname;
         $employee->jobtitle = $request->jobtitle;
         $employee->save();
+
+        return response()->json(['data' => ['status' => 'successfully updated employee']]);
         
     }
 
@@ -73,5 +83,7 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
         $employee->delete();
+        
+        return response()->json(['data' => ['status' => 'successfully deleted employee']]);
     }
 }
