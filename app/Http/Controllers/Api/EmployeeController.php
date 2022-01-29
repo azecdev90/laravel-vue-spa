@@ -38,6 +38,8 @@ class EmployeeController extends Controller
         $employee->jobtitle = $request->jobtitle;
         $employee->save();
 
+        return new EmployeeResource($employee);
+
 
     }
 
