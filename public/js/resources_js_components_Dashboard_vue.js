@@ -23,6 +23,17 @@ __webpack_require__.r(__webpack_exports__);
     window.axios.get('api/employees').then(function (response) {
       _this.data = response.data.data;
     });
+  },
+  methods: {
+    del: function del(id) {
+      var _this2 = this;
+
+      window.axios["delete"]('api/employees/' + id).then(function (response) {
+        window.axios.get('api/employees').then(function (response) {
+          _this2.data = response.data.data;
+        });
+      });
+    }
   }
 });
 
@@ -43,6 +54,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit");
 
+var _hoisted_2 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -66,7 +78,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"])]);
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      onClick: function onClick($event) {
+        return $options.del(data.id);
+      }
+    }, "Delete", 8
+    /* PROPS */
+    , _hoisted_2)]);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))]);
