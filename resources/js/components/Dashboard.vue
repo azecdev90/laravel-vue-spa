@@ -9,7 +9,7 @@
     <button @click="del(data.id)">Delete</button>
     </li>
     </ol>
- <h1 v-if="success">Vue is awesome! You just created your first employee</h1>
+ <h1 v-if="success">Vue is awesome! You just deleted employee</h1>
 
 </template>
 <script>
