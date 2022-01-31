@@ -33,9 +33,7 @@ export default {
     },
     methods: {
          cre() {
-             console.log('bla')
               window.axios.post('api/employees', {title:this.title, firstname:this.firstname, lastname:this.lastname, jobtitle:this.jobtitle}).then(response=>{
-                  console.log(response.data)
             var object = response.data
             if(object.hasOwnProperty('errors')){
                 this.errors = response.data.errors
