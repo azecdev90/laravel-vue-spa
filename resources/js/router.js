@@ -2,9 +2,9 @@ import {createWebHistory, createRouter} from "vue-router";
 
 const routes = [
     {
-    name: 'dashboard',
-    path: '',
-    component: () => import('./components/Dashboard.vue')
+        name: 'dashboard',
+        path: '',
+        component: () => import('./components/Dashboard.vue')
     },
     {
         name: 'create',
