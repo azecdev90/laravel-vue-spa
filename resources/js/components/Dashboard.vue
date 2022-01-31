@@ -9,6 +9,7 @@
     <button @click="del(data.id)">Delete</button>
     </li>
     </ol>
+ <h1 v-if="success">Vue is awesome! You just created your first employee</h1>
 
 </template>
 <script>
@@ -16,6 +17,7 @@ export default {
     data () {
         return {
             data: [],
+            success: null,
         }
     },
     created() {
@@ -28,6 +30,8 @@ export default {
             window.axios.delete('api/employees/'+id).then(response =>{
                  window.axios.get('api/employees').then(response => {
                  this.data = response.data.data
+                 this.success = true
+                 setTimeout(() => this.success = null, 2000)
         })
 
             })
