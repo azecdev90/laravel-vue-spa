@@ -41,12 +41,11 @@ export default {
             } else {
                  this.hasError = false,
                     this.success = true,
-
                     this.title = null,
                     this.firstname = null,
                     this.lastname = null,
                     this.jobtitle = null
-
+                    setTimeout(() => this.success = null, 2000);
             }   
         })
     

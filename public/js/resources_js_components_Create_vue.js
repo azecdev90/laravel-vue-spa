@@ -27,14 +27,12 @@ __webpack_require__.r(__webpack_exports__);
     cre: function cre() {
       var _this = this;
 
-      console.log('bla');
       window.axios.post('api/employees', {
         title: this.title,
         firstname: this.firstname,
         lastname: this.lastname,
         jobtitle: this.jobtitle
       }).then(function (response) {
-        console.log(response.data);
         var object = response.data;
 
         if (object.hasOwnProperty('errors')) {
@@ -42,6 +40,9 @@ __webpack_require__.r(__webpack_exports__);
           _this.hasError = true;
         } else {
           _this.hasError = false, _this.success = true, _this.title = null, _this.firstname = null, _this.lastname = null, _this.jobtitle = null;
+          setTimeout(function () {
+            return _this.success = null;
+          }, 2000);
         }
       });
     }
