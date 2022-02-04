@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-3xl mx-auto bg-red-400 py-1">
+  <div class="container max-w-3xl mx-auto py-1">
     <form>
       <div>
         <label class="block"> Title </label>

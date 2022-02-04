@@ -1,6 +1,6 @@
 <template>
 
-<div class="container max-w-3xl mx-auto my-5 bg-blue-400">
+<div class="container max-w-3xl mx-auto my-5">
     <p v-if="hasError">
     <li v-for="error in errors">
       {{ error[0] }}
