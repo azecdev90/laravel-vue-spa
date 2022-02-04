@@ -1,25 +1,38 @@
 <template>
-  <div class="container w-1/2 mx-auto bg-red-400 py-1">
+  <div class="container max-w-3xl mx-auto bg-red-400 py-1">
     <form>
       <div>
         <label class="block"> Title </label>
-      <input type="text" class="w-1/3 mx-0 border border-gray-300 outline-none focus:border-gray-400">d
+      <input type="text" class="w-1/3 mx-0 border border-gray-300 outline-none focus:border-gray-400" name="title" v-model="title">d
       </div>
+
+      <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
+        Firstname
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="firstname" type="text" placeholder="firstname" v-model="firstname">
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
+        Lastname
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="lastname" type="text" placeholder="lastname" v-model="lastname">
+    </div>
+     <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="jobtitle">
+        Jobtitle
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="jobtitle" type="text" placeholder="jobtitle" v-model="jobtitle">
+    </div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" @click.stop.prevent="upd">
+        Create Employee
+      </button>
+
       </form>
+        <h1 v-if="success">Vue is awesome! You just updated your employee</h1>
+
 </div>
-
-<form>
-  <label for="fname">Title</label>
-  <input type="text" name="title" v-model="title"><br>
-  <label for="lname">First name:</label>
-  <input type="text"  name="firstname" v-model="firstname"><br>
-  <label for="lastname">Last name:</label>
-  <input type="text"  name="lastname" v-model="lastname"><br>
-  <label for="jobtitle">Job title:</label>
-  <input type="text"  name="jobtitle" v-model="jobtitle"><br>
-  <button @click.stop.prevent="upd">Submit</button>
-</form>
-
 </template>
 <script>
 export default {
@@ -29,6 +42,8 @@ data() {
           firstname: null,
           lastname: null,
           jobtitle: null,
+          success: null,
+
   }
 },
 created() {
@@ -42,7 +57,9 @@ created() {
     upd() {
      var formData = {'title':this.title,'firstname':this.firstname,'lastname':this.lastname,'jobtitle':this.jobtitle}
       window.axios.put('/api/employees/'+this.$route.params.id, formData ).then(response => {
-                    
+                    this.success = true
+                                setTimeout(() => (this.success = null), 2000);
+
       })
     }
   }
