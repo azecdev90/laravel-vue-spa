@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    window.axios.get('api/employees').then(function (response) {
+    window.axios.get("api/employees").then(function (response) {
       _this.data = response.data.data;
     });
   },
@@ -29,8 +29,8 @@ __webpack_require__.r(__webpack_exports__);
     del: function del(id) {
       var _this2 = this;
 
-      window.axios["delete"]('api/employees/' + id).then(function (response) {
-        window.axios.get('api/employees').then(function (response) {
+      window.axios["delete"]("api/employees/" + id).then(function (response) {
+        window.axios.get("api/employees").then(function (response) {
           _this2.data = response.data.data;
           _this2.success = true;
           setTimeout(function () {
@@ -73,19 +73,19 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "bg-gray-50"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " ID "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Title "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "Title"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Firstname "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "Firstname"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Lastname "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "Lastname"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Jobtitle "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "Jobtitle"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Edit "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "Edit"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-6 py-2 text-xs text-gray-500"
-}, " Delete ")])], -1
+}, "Delete")])], -1
 /* HOISTED */
 );
 
@@ -169,7 +169,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $options.del(data.id);
       }
-    }, "Delete", 8
+    }, " Delete ", 8
     /* PROPS */
     , _hoisted_18)])]);
   }), 256

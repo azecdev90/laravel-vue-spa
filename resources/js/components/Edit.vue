@@ -1,4 +1,12 @@
 <template>
+  <div class="container w-1/2 mx-auto bg-red-400 py-1">
+    <form>
+      <div>
+        <label class="block"> Title </label>
+      <input type="text" class="w-1/3 mx-0 border border-gray-300 outline-none focus:border-gray-400">d
+      </div>
+      </form>
+</div>
 
 <form>
   <label for="fname">Title</label>
