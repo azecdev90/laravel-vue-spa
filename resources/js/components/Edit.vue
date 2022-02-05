@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-3xl mx-auto bg-red-400 py-1">
+  <div class="container max-w-3xl mx-auto py-1">
     <form>
       <div>
         <label class="block"> Title </label>
@@ -26,7 +26,7 @@
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="jobtitle" type="text" placeholder="jobtitle" v-model="jobtitle">
     </div>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" @click.stop.prevent="upd">
-        Create Employee
+        Edit
       </button>
 
       </form>

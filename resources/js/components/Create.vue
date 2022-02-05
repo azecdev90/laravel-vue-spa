@@ -1,6 +1,6 @@
 <template>
 
-<div class="container max-w-3xl mx-auto my-5 bg-blue-400">
+<div class="container max-w-3xl mx-auto my-5">
     <p v-if="hasError">
     <li v-for="error in errors">
       {{ error[0] }}
@@ -35,7 +35,7 @@
     </div>
 
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" @click.stop.prevent="cre">
-        Create Employee
+        Create
       </button>
   
   </form>
