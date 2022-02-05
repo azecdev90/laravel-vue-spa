@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    window.axios.get('/api/employees/' + this.$route.params.id).then(function (response) {
+    window.axios.get("/api/employees/" + this.$route.params.id).then(function (response) {
       _this.title = response.data.data.title;
       _this.firstname = response.data.data.firstname;
       _this.lastname = response.data.data.lastname;
@@ -36,12 +36,12 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var formData = {
-        'title': this.title,
-        'firstname': this.firstname,
-        'lastname': this.lastname,
-        'jobtitle': this.jobtitle
+        title: this.title,
+        firstname: this.firstname,
+        lastname: this.lastname,
+        jobtitle: this.jobtitle
       };
-      window.axios.put('/api/employees/' + this.$route.params.id, formData).then(function (response) {
+      window.axios.put("/api/employees/" + this.$route.params.id, formData).then(function (response) {
         _this2.success = true;
         setTimeout(function () {
           return _this2.success = null;
@@ -159,7 +159,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.upd && $options.upd.apply($options, arguments);
     }, ["stop", "prevent"]))
-  }, " Create Employee ")]), $data.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", _hoisted_10, "Vue is awesome! You just updated your employee")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+  }, " Edit ")]), $data.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", _hoisted_10, "Vue is awesome! You just updated your employee")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
