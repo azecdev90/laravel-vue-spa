@@ -2,19 +2,24 @@
   <div class="container max-w-3xl mx-auto py-1">
     <form>
       <div>
-        <label class="block"> Title </label>
+        <label class="block text-gray-700 text-sm font-bold mb-2"> Title </label>
         <input
           type="text"
           class="
-            w-1/3
-            mx-0
-            border border-gray-300
-            outline-none
-            focus:border-gray-400
+           shadow
+            appearance-none
+            border
+            rounded
+            w-full
+            py-2
+            px-3
+            text-gray-700
+            leading-tight
+            focus:outline-none focus:shadow-outline
           "
           name="title"
           v-model="title"
-        />d
+        />
       </div>
 
       <div class="mb-4">
@@ -97,16 +102,7 @@
         />
       </div>
       <button
-        class="
-          bg-blue-500
-          hover:bg-blue-700
-          text-white
-          font-bold
-          py-2
-          px-4
-          rounded
-          focus:outline-none focus:shadow-outline
-        "
+        class="px-4 py-1 text-sm text-white bg-blue-400 rounded"
         type="button"
         @click.stop.prevent="upd"
       >
