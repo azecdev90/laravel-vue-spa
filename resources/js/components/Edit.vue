@@ -2,11 +2,13 @@
   <div class="container max-w-3xl mx-auto py-1">
     <form>
       <div>
-        <label class="block text-gray-700 text-sm font-bold mb-2"> Title </label>
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          Title
+        </label>
         <input
           type="text"
           class="
-           shadow
+            shadow
             appearance-none
             border
             rounded
@@ -24,7 +26,11 @@
 
       <div class="mb-4">
         <label
-          class="block text-gray-700 text-sm font-bold mb-2"
+          class="block 
+                 text-gray-700 
+                 text-sm 
+                 font-bold 
+                 mb-2"
           for="firstname"
         >
           Firstname
@@ -51,7 +57,10 @@
 
       <div class="mb-4">
         <label
-          class="block text-gray-700 text-sm font-bold mb-2"
+          class="block 
+                 text-gray-700 
+                 text-sm 
+                 font-bold mb-2"
           for="lastname"
         >
           Lastname
