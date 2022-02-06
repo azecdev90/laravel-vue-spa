@@ -111,16 +111,7 @@
       </div>
 
       <button
-        class="
-          bg-blue-500
-          hover:bg-blue-700
-          text-white
-          font-bold
-          py-2
-          px-4
-          rounded
-          focus:outline-none focus:shadow-outline
-        "
+        class="px-4 py-1 text-sm text-white bg-blue-400 rounded"
         type="button"
         @click.stop.prevent="cre"
       >
