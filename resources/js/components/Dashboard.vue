@@ -61,7 +61,7 @@
   </div>
   <div class="w-1/2 mx-auto">
   <div class="w-1/2 mx-auto">
-    <a @click="currentPage = firstPage">FirstPage</a>
+    <a @click="currentPage = firstPage">First page</a>
 
 <a v-for="n in totalPage" v-bind:key="n" @click="setCurrent(n)">{{ n }}</a>
 <a @click="currentPage = lastPage">Last page</a>
