@@ -3,6 +3,7 @@ This is single page application made with [VueJS](https://vuejs.org/) and [Larav
 
 ## Frontend
 - TailwindCSS utility-first framework
+- Flex tehnique used in framework
 - Responsive menu with VueJS
 - API results paginated with VueJS
 - Lazy loading components in Vuejs
@@ -12,6 +13,6 @@ This is single page application made with [VueJS](https://vuejs.org/) and [Larav
 ## Backend
 - API implemented
 - Error responses made with 
-- Resources used for better 
-- 
+- Resources used for consisten display API data 
+- Request implemented for validation
 
