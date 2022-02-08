@@ -12,7 +12,7 @@ This is single page application made with [VueJS](https://vuejs.org/) and [Larav
 
 ## Backend
 - API implemented
-- Error responses made with 
+- Error responses made in JSON
 - Resources used for consisten display API data 
 - Request implemented for validation
 
